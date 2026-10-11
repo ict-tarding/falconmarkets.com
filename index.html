@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Falcon Markets - India's Next-Gen Trading Platform | Download Official App</title>
+    <title>Falcon Markets - India's Next-Gen Trading Platform | SEBI Reg. Broker</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for Icons -->
@@ -21,12 +21,11 @@
                         heading: ['Outfit', 'sans-serif'],
                     },
                     colors: {
-                        deepNavy: '#070B14',
-                        obsidianCard: '#0D1424',
+                        deepNavy: '#050914',
+                        obsidianCard: '#0A101D',
                         emeraldTrust: '#10B981',
                         saffronGold: '#F59E0B',
                         electricBlue: '#3B82F6',
-                        dangerRed: '#EF4444',
                         borderGlass: 'rgba(255, 255, 255, 0.08)'
                     }
                 }
@@ -36,7 +35,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #070B14;
+            background-color: #050914;
             color: #F1F5F9;
             overflow-x: hidden;
         }
@@ -44,13 +43,13 @@
             font-family: 'Outfit', sans-serif;
         }
         .glass-card {
-            background: rgba(13, 20, 36, 0.75);
+            background: rgba(10, 16, 29, 0.75);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
         .glass-nav {
-            background: rgba(7, 11, 20, 0.88);
+            background: rgba(5, 9, 20, 0.92);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -59,10 +58,7 @@
             box-shadow: 0 0 35px rgba(245, 158, 11, 0.25);
         }
         .glow-emerald {
-            box-shadow: 0 0 35px rgba(16, 185, 129, 0.3);
-        }
-        .glow-blue {
-            box-shadow: 0 0 35px rgba(59, 130, 246, 0.25);
+            box-shadow: 0 0 35px rgba(16, 185, 129, 0.35);
         }
         @keyframes ticker {
             0% { transform: translateX(0); }
@@ -77,73 +73,72 @@
             animation-play-state: paused;
         }
         @keyframes pulseGlow {
-            0%, 100% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.4); }
-            50% { box-shadow: 0 0 45px rgba(16, 185, 129, 0.8); }
+            0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(16, 185, 129, 0.8); }
         }
         .btn-pulse {
             animation: pulseGlow 2.5s infinite;
         }
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #070B14;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #1E293B;
-            border-radius: 4px;
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050914; }
+        ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
     </style>
 </head>
 <body class="bg-deepNavy text-slate-100 selection:bg-emeraldTrust selection:text-white">
 
     <!-- TOP TICKER BAR -->
-    <div class="bg-slate-950 border-b border-slate-800/80 text-xs py-2 px-4 overflow-hidden relative z-50">
+    <div class="bg-slate-950 border-b border-slate-800/80 text-[11px] py-2 px-4 overflow-hidden relative z-50">
         <div class="animate-ticker flex items-center space-x-10 text-slate-300 font-medium">
             <div class="flex items-center space-x-2">
-                <span class="text-slate-400 font-semibold">NIFTY 50:</span>
-                <span id="ticker-nifty" class="text-white font-bold">22,520.45</span>
-                <span class="text-emeraldTrust flex items-center"><i class="fa-solid fa-arrow-trend-up mr-1"></i>+288.65 (+1.30%)</span>
-            </div>
-            <div class="flex items-center space-x-2">
                 <span class="text-slate-400 font-semibold">SENSEX:</span>
-                <span id="ticker-sensex" class="text-white font-bold">72,472.33</span>
+                <span class="text-white font-bold">72,472.33</span>
                 <span class="text-emeraldTrust flex items-center"><i class="fa-solid fa-arrow-trend-up mr-1"></i>+879.09 (+1.23%)</span>
             </div>
             <div class="flex items-center space-x-2">
                 <span class="text-slate-400 font-semibold">BANK NIFTY:</span>
-                <span id="ticker-banknifty" class="text-white font-bold">55,256.65</span>
+                <span class="text-white font-bold">55,256.65</span>
                 <span class="text-emeraldTrust flex items-center"><i class="fa-solid fa-arrow-trend-up mr-1"></i>+741.60 (+1.36%)</span>
             </div>
             <div class="flex items-center space-x-2">
                 <span class="text-slate-400 font-semibold">RELIANCE:</span>
-                <span id="ticker-rel" class="text-white font-bold">₹1,284.50</span>
+                <span class="text-white font-bold">₹1,284.50</span>
                 <span class="text-emeraldTrust flex items-center"><i class="fa-solid fa-arrow-trend-up mr-1"></i>+1.85%</span>
             </div>
             <div class="flex items-center space-x-2">
                 <span class="text-slate-400 font-semibold">TCS:</span>
-                <span id="ticker-tcs" class="text-white font-bold">₹2,163.00</span>
+                <span class="text-white font-bold">₹2,163.00</span>
                 <span class="text-emeraldTrust flex items-center"><i class="fa-solid fa-arrow-trend-up mr-1"></i>+4.23%</span>
             </div>
             <div class="flex items-center space-x-2">
                 <span class="text-slate-400 font-semibold">INFOSYS:</span>
-                <span id="ticker-infy" class="text-white font-bold">₹1,024.05</span>
+                <span class="text-white font-bold">₹1,024.05</span>
                 <span class="text-emeraldTrust flex items-center"><i class="fa-solid fa-arrow-trend-up mr-1"></i>+3.01%</span>
             </div>
-            <!-- Duplicate for infinite seamless scroll -->
             <div class="flex items-center space-x-2">
                 <span class="text-slate-400 font-semibold">NIFTY 50:</span>
                 <span class="text-white font-bold">22,520.45</span>
                 <span class="text-emeraldTrust flex items-center"><i class="fa-solid fa-arrow-trend-up mr-1"></i>+288.65 (+1.30%)</span>
             </div>
+            <!-- Duplicated Seamless Loop -->
+            <div class="flex items-center space-x-2">
+                <span class="text-slate-400 font-semibold">SENSEX:</span>
+                <span class="text-white font-bold">72,472.33</span>
+                <span class="text-emeraldTrust flex items-center"><i class="fa-solid fa-arrow-trend-up mr-1"></i>+879.09 (+1.23%)</span>
+            </div>
+            <div class="flex items-center space-x-2">
+                <span class="text-slate-400 font-semibold">BANK NIFTY:</span>
+                <span class="text-white font-bold">55,256.65</span>
+                <span class="text-emeraldTrust flex items-center"><i class="fa-solid fa-arrow-trend-up mr-1"></i>+741.60 (+1.36%)</span>
+            </div>
         </div>
     </div>
 
-    <!-- HEADER / NAVBAR -->
+    <!-- MAIN NAVBAR -->
     <header class="glass-nav sticky top-0 z-40 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
             <a href="#" class="flex items-center space-x-3 group">
-                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-saffronGold via-amber-500 to-emeraldTrust flex items-center justify-center glow-gold group-hover:scale-105 transition-transform">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-saffronGold via-amber-500 to-emeraldTrust flex items-center justify-center glow-gold group-hover:scale-105 transition-transform">
                     <i class="fa-solid fa-chart-line text-slate-950 text-xl font-black"></i>
                 </div>
                 <div class="flex flex-col">
@@ -151,11 +146,12 @@
                         Falcon <span class="text-saffronGold ml-1.5">Markets</span>
                     </span>
                     <span class="text-[9px] text-slate-400 tracking-wider uppercase font-bold flex items-center">
-                        <i class="fa-solid fa-shield-halved text-emeraldTrust mr-1"></i> SEBI Reg. Broker
+                        <i class="fa-solid fa-shield-halved text-emeraldTrust mr-1"></i> SEBI REG. BROKER
                     </span>
                 </div>
             </a>
 
+            <!-- Navigation Links -->
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
                 <a href="#features" class="hover:text-saffronGold transition-colors">Features</a>
                 <a href="#watchlist" class="hover:text-saffronGold transition-colors">Live Markets</a>
@@ -166,9 +162,10 @@
                 <a href="#downloads-hub" class="hover:text-saffronGold transition-colors">Download Options</a>
             </nav>
 
+            <!-- Navbar Download Button -->
             <div class="flex items-center space-x-4">
-                <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" 
-                   onclick="triggerDownloadAnimation(event)" class="inline-flex items-center space-x-2.5 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emeraldTrust via-teal-500 to-emerald-600 hover:opacity-95 text-slate-950 font-extrabold text-sm btn-pulse transition-all shadow-lg">
+                <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk"
+                   class="inline-flex items-center space-x-2.5 px-5 py-2.5 rounded-xl bg-emeraldTrust hover:bg-emerald-400 text-slate-950 font-extrabold text-sm btn-pulse transition-all shadow-lg">
                     <i class="fa-brands fa-android text-lg"></i>
                     <span>Download APK</span>
                 </a>
@@ -177,17 +174,13 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative pt-12 pb-24 overflow-hidden">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-electricBlue/10 rounded-full blur-[150px] pointer-events-none"></div>
-        <div class="absolute top-1/3 right-10 w-[450px] h-[450px] bg-saffronGold/10 rounded-full blur-[130px] pointer-events-none"></div>
-
+    <section id="features" class="relative pt-12 pb-24 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
-                <!-- Hero Left Column -->
+                <!-- Left Hero Text -->
                 <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
                     <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-slate-900/90 border border-saffronGold/30 text-slate-200 text-xs font-semibold shadow-xl">
-                        <span class="w-2 h-2 rounded-full bg-emeraldTrust animate-ping"></span>
                         <i class="fa-solid fa-award text-saffronGold"></i>
                         <span>SEBI Reg. No: <strong class="text-white">INZ000293831</strong> • 256-Bit SSL Encrypted</span>
                     </div>
@@ -206,7 +199,7 @@
                     <!-- CTAs -->
                     <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
                         <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk"
-                           onclick="triggerDownloadAnimation(event)" class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-emeraldTrust via-teal-500 to-emerald-600 text-slate-950 font-black text-base btn-pulse shadow-2xl transition-all transform hover:-translate-y-0.5">
+                           class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 px-8 py-4 rounded-2xl bg-emeraldTrust hover:bg-emerald-400 text-slate-950 font-black text-base btn-pulse shadow-2xl transition-all transform hover:-translate-y-0.5">
                             <i class="fa-brands fa-android text-2xl"></i>
                             <div class="text-left">
                                 <div class="text-[10px] uppercase font-bold tracking-wider text-slate-900">Direct Official Download</div>
@@ -214,9 +207,9 @@
                             </div>
                         </a>
 
-                        <a href="#watchlist" class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 px-6 py-4 rounded-2xl glass-card hover:bg-slate-800 text-slate-200 font-bold text-base transition-all border border-slate-700">
-                            <i class="fa-solid fa-chart-simple text-saffronGold text-lg"></i>
-                            <span>Explore Live Markets</span>
+                        <a href="#downloads-hub" class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 px-6 py-4 rounded-2xl glass-card hover:bg-slate-800 text-slate-200 font-bold text-base transition-all border border-slate-700">
+                            <i class="fa-solid fa-laptop text-saffronGold text-lg"></i>
+                            <span>Desktop & Web Terminal</span>
                         </a>
                     </div>
 
@@ -236,10 +229,8 @@
                     </div>
                 </div>
 
-                <!-- Hero Right Column: Mock Mobile Experience -->
+                <!-- Right Hero: Phone Mockup -->
                 <div class="lg:col-span-5 relative flex justify-center">
-                    <div class="absolute inset-0 bg-gradient-to-tr from-saffronGold/20 via-emeraldTrust/20 to-electricBlue/20 rounded-3xl blur-2xl transform rotate-3"></div>
-                    
                     <div class="relative w-full max-w-[330px] rounded-[42px] bg-slate-950 border-[8px] border-slate-800 shadow-2xl p-4 overflow-hidden glow-gold">
                         <div class="absolute top-2 left-1/2 -translate-x-1/2 w-28 h-5 bg-slate-800 rounded-full z-20 flex items-center justify-center">
                             <div class="w-3 h-3 rounded-full bg-slate-900 mr-2"></div>
@@ -271,7 +262,7 @@
                                     <span class="font-bold text-slate-200">NIFTY 22,500 CE</span>
                                     <span class="text-[10px] text-emeraldTrust font-extrabold bg-emeraldTrust/10 px-2 py-0.5 rounded">STRONG BUY</span>
                                 </div>
-                                <svg class="w-full h-24" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="w-full h-20" viewBox="0 0 280 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0 65 Q 40 50, 80 55 T 160 30 T 240 18 T 280 8" stroke="#10B981" stroke-width="2.5" fill="none"/>
                                     <path d="M0 65 Q 40 50, 80 55 T 160 30 T 240 18 T 280 8 V 80 H 0 Z" fill="url(#paint0_falcon)" opacity="0.35"/>
                                     <defs>
@@ -283,8 +274,25 @@
                                 </svg>
                             </div>
 
-                            <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk"
-                               onclick="triggerDownloadAnimation(event)" class="block w-full py-3 rounded-xl bg-gradient-to-r from-saffronGold to-amber-500 text-slate-950 text-center font-black text-xs shadow-lg">
+                            <div class="space-y-2">
+                                <div class="text-[10px] font-bold text-slate-400">Market Movers</div>
+                                <div class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                                    <div class="flex items-center space-x-2">
+                                        <div class="w-7 h-7 rounded-lg bg-saffronGold/20 text-saffronGold flex items-center justify-center font-bold text-[10px]">TCS</div>
+                                        <div>
+                                            <div class="font-bold text-white">Tata Consultancy</div>
+                                            <div class="text-[9px] text-slate-400">NSE • Tech</div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <div class="font-bold text-white">₹2,163.00</div>
+                                        <div class="text-[9px] text-emeraldTrust font-bold">+4.23%</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" 
+                               class="block w-full py-3 rounded-xl bg-gradient-to-r from-saffronGold to-amber-500 text-slate-950 text-center font-black text-xs shadow-lg hover:opacity-90">
                                 Instant Order Execution
                             </a>
                         </div>
@@ -295,37 +303,369 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-slate-950 border-t border-slate-900 py-8 text-center text-xs text-slate-500">
-        <p>© 2026 Falcon Markets India. All Rights Reserved. SEBI Reg. Broker.</p>
-    </footer>
-
-    <!-- DOWNLOAD ANIMATION MODAL SCRIPT -->
-    <div id="download-modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="glass-card p-6 rounded-2xl max-w-sm w-full text-center space-y-4 glow-emerald">
-            <div class="w-12 h-12 rounded-full bg-emeraldTrust/20 text-emeraldTrust mx-auto flex items-center justify-center text-xl font-bold">
-                <i class="fa-solid fa-download animate-bounce"></i>
+    <!-- LIVE MARKETS SECTION -->
+    <section id="watchlist" class="py-20 border-t border-slate-800/80 bg-slate-950/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <div class="text-saffronGold font-bold text-xs uppercase tracking-wider mb-2 flex items-center">
+                        <i class="fa-solid fa-chart-simple mr-2"></i> Real-Time Price Feeds
+                    </div>
+                    <h2 class="font-heading font-black text-3xl sm:text-4xl text-white">Live Market Watch & Heatmap</h2>
+                </div>
+                <div class="mt-4 md:mt-0 flex flex-wrap gap-2">
+                    <button class="px-4 py-2 rounded-xl text-xs font-bold bg-saffronGold text-slate-950 shadow-md">All Stocks</button>
+                    <button class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700">IT Giants</button>
+                    <button class="px-4 py-2 rounded-xl text-xs font-bold bg-slate-800 text-slate-300 hover:bg-slate-700">Banking</button>
+                </div>
             </div>
-            <h3 class="font-heading font-bold text-lg text-white">Downloading Falcon APK</h3>
-            <p class="text-xs text-slate-300">Your direct download from Vercel is starting securely...</p>
-            <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
-                <div id="progress-bar" class="bg-emeraldTrust h-full w-0 transition-all duration-700"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Reliance -->
+                <div class="glass-card p-6 rounded-2xl hover:border-saffronGold/50 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 rounded-2xl bg-blue-900/30 border border-blue-500/20 flex items-center justify-center font-black text-blue-400 text-lg">REL</div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white">Reliance Industries</h3>
+                                <span class="text-xs text-slate-400">RELIANCE • NSE</span>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full bg-emeraldTrust/10 text-emeraldTrust text-xs font-bold border border-emeraldTrust/20">+1.85%</span>
+                    </div>
+                    <div class="flex justify-between items-end pt-4 border-t border-slate-800/80">
+                        <div>
+                            <div class="text-xs text-slate-400">Current Market Price</div>
+                            <div class="text-2xl font-black font-heading text-white mt-0.5">₹1,284.16</div>
+                        </div>
+                        <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="px-4 py-2 rounded-xl bg-emeraldTrust hover:bg-emerald-400 text-slate-950 text-xs font-bold shadow-md">Trade Fast</a>
+                    </div>
+                </div>
+
+                <!-- TCS -->
+                <div class="glass-card p-6 rounded-2xl hover:border-saffronGold/50 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 rounded-2xl bg-purple-900/30 border border-purple-500/20 flex items-center justify-center font-black text-purple-400 text-lg">TCS</div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white">Tata Consultancy</h3>
+                                <span class="text-xs text-slate-400">TCS • NSE</span>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full bg-emeraldTrust/10 text-emeraldTrust text-xs font-bold border border-emeraldTrust/20">+4.23%</span>
+                    </div>
+                    <div class="flex justify-between items-end pt-4 border-t border-slate-800/80">
+                        <div>
+                            <div class="text-xs text-slate-400">Current Market Price</div>
+                            <div class="text-2xl font-black font-heading text-white mt-0.5">₹2,160.03</div>
+                        </div>
+                        <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="px-4 py-2 rounded-xl bg-emeraldTrust hover:bg-emerald-400 text-slate-950 text-xs font-bold shadow-md">Trade Fast</a>
+                    </div>
+                </div>
+
+                <!-- INFY -->
+                <div class="glass-card p-6 rounded-2xl hover:border-saffronGold/50 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 rounded-2xl bg-teal-900/30 border border-teal-500/20 flex items-center justify-center font-black text-teal-400 text-lg">INFY</div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white">Infosys Limited</h3>
+                                <span class="text-xs text-slate-400">INFY • NSE</span>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full bg-emeraldTrust/10 text-emeraldTrust text-xs font-bold border border-emeraldTrust/20">+3.01%</span>
+                    </div>
+                    <div class="flex justify-between items-end pt-4 border-t border-slate-800/80">
+                        <div>
+                            <div class="text-xs text-slate-400">Current Market Price</div>
+                            <div class="text-2xl font-black font-heading text-white mt-0.5">₹1,023.84</div>
+                        </div>
+                        <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="px-4 py-2 rounded-xl bg-emeraldTrust hover:bg-emerald-400 text-slate-950 text-xs font-bold shadow-md">Trade Fast</a>
+                    </div>
+                </div>
+
+                <!-- HDFC -->
+                <div class="glass-card p-6 rounded-2xl hover:border-saffronGold/50 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 rounded-2xl bg-sky-900/30 border border-sky-500/20 flex items-center justify-center font-black text-sky-400 text-lg">HDFC</div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white">HDFC Bank Ltd</h3>
+                                <span class="text-xs text-slate-400">HDFCBANK • NSE</span>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full bg-emeraldTrust/10 text-emeraldTrust text-xs font-bold border border-emeraldTrust/20">+1.62%</span>
+                    </div>
+                    <div class="flex justify-between items-end pt-4 border-t border-slate-800/80">
+                        <div>
+                            <div class="text-xs text-slate-400">Current Market Price</div>
+                            <div class="text-2xl font-black font-heading text-white mt-0.5">₹1,647.62</div>
+                        </div>
+                        <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="px-4 py-2 rounded-xl bg-emeraldTrust hover:bg-emerald-400 text-slate-950 text-xs font-bold shadow-md">Trade Fast</a>
+                    </div>
+                </div>
+
+                <!-- ICICI -->
+                <div class="glass-card p-6 rounded-2xl hover:border-saffronGold/50 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 rounded-2xl bg-amber-900/30 border border-amber-500/20 flex items-center justify-center font-black text-amber-400 text-lg">ICICI</div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white">ICICI Bank Ltd</h3>
+                                <span class="text-xs text-slate-400">ICICIBANK • NSE</span>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full bg-emeraldTrust/10 text-emeraldTrust text-xs font-bold border border-emeraldTrust/20">+2.10%</span>
+                    </div>
+                    <div class="flex justify-between items-end pt-4 border-t border-slate-800/80">
+                        <div>
+                            <div class="text-xs text-slate-400">Current Market Price</div>
+                            <div class="text-2xl font-black font-heading text-white mt-0.5">₹1,120.57</div>
+                        </div>
+                        <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="px-4 py-2 rounded-xl bg-emeraldTrust hover:bg-emerald-400 text-slate-950 text-xs font-bold shadow-md">Trade Fast</a>
+                    </div>
+                </div>
+
+                <!-- Wipro -->
+                <div class="glass-card p-6 rounded-2xl hover:border-saffronGold/50 transition-all">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-12 h-12 rounded-2xl bg-indigo-900/30 border border-indigo-500/20 flex items-center justify-center font-black text-indigo-400 text-lg">WIP</div>
+                            <div>
+                                <h3 class="font-heading font-bold text-lg text-white">Wipro Limited</h3>
+                                <span class="text-xs text-slate-400">WIPRO • NSE</span>
+                            </div>
+                        </div>
+                        <span class="px-2.5 py-1 rounded-full bg-emeraldTrust/10 text-emeraldTrust text-xs font-bold border border-emeraldTrust/20">+2.85%</span>
+                    </div>
+                    <div class="flex justify-between items-end pt-4 border-t border-slate-800/80">
+                        <div>
+                            <div class="text-xs text-slate-400">Current Market Price</div>
+                            <div class="text-2xl font-black font-heading text-white mt-0.5">₹475.49</div>
+                        </div>
+                        <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="px-4 py-2 rounded-xl bg-emeraldTrust hover:bg-emerald-400 text-slate-950 text-xs font-bold shadow-md">Trade Fast</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <script>
-        function triggerDownloadAnimation(e) {
-            const modal = document.getElementById('download-modal');
-            const progressBar = document.getElementById('progress-bar');
-            modal.classList.remove('hidden');
-            progressBar.style.width = '100%';
+    <!-- STUDENT WALL SECTION -->
+    <section id="students" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-saffronGold text-xs font-semibold mb-3">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Anonymous Student Wall</span>
+                    </div>
+                    <h2 class="font-heading font-black text-3xl sm:text-4xl text-white">Verified Profits by Student Traders</h2>
+                    <p class="text-slate-400 text-sm mt-2">Real-time P&L logs from students and young traders across Indian colleges trading with Falcon Algo tools.</p>
+                </div>
+
+                <div class="mt-6 md:mt-0 p-4 rounded-2xl glass-card border border-emeraldTrust/30 text-right">
+                    <div class="text-xs text-slate-400 font-semibold">Community Gains This Month</div>
+                    <div class="text-2xl font-black font-heading text-emeraldTrust">₹2,84,50,000+</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Student 1 -->
+                <div class="glass-card p-6 rounded-2xl space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-full bg-saffronGold text-slate-950 flex items-center justify-center font-bold text-base">AV</div>
+                        <div>
+                            <h3 class="font-bold text-white text-base">Aakash V.</h3>
+                            <div class="text-xs text-slate-400">Delhi University • 3rd Year</div>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800 space-y-2 text-xs">
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Verified P&L:</span>
+                            <span class="text-emeraldTrust font-extrabold text-sm">+₹1,42,850</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Strategy:</span>
+                            <span class="text-white font-bold">NIFTY Options + Falcon Algo</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Execution Speed:</span>
+                            <span class="text-saffronGold font-bold">12ms Ultra Fast</span>
+                        </div>
+                    </div>
+                    <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="block w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-center text-xs font-bold text-slate-300">View Trade Verification Log</a>
+                </div>
+
+                <!-- Student 2 -->
+                <div class="glass-card p-6 rounded-2xl space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-full bg-emeraldTrust text-slate-950 flex items-center justify-center font-bold text-base">PS</div>
+                        <div>
+                            <h3 class="font-bold text-white text-base">Priya Sharma</h3>
+                            <div class="text-xs text-slate-400">IIT Bombay • M.Tech Student</div>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800 space-y-2 text-xs">
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Verified P&L:</span>
+                            <span class="text-emeraldTrust font-extrabold text-sm">+₹88,400</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Strategy:</span>
+                            <span class="text-white font-bold">BankNifty Scalping</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Execution Speed:</span>
+                            <span class="text-saffronGold font-bold">15ms Ultra Fast</span>
+                        </div>
+                    </div>
+                    <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="block w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-center text-xs font-bold text-slate-300">View Trade Verification Log</a>
+                </div>
+
+                <!-- Student 3 -->
+                <div class="glass-card p-6 rounded-2xl space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 rounded-full bg-electricBlue text-white flex items-center justify-center font-bold text-base">RM</div>
+                        <div>
+                            <h3 class="font-bold text-white text-base">Rohan Mehta</h3>
+                            <div class="text-xs text-slate-400">CA Student • Ahmedabad</div>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-xl bg-slate-950/60 border border-slate-800 space-y-2 text-xs">
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Verified P&L:</span>
+                            <span class="text-emeraldTrust font-extrabold text-sm">+₹2,15,000</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Strategy:</span>
+                            <span class="text-white font-bold">Equity Delivery Swing</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-400">Brokerage Paid:</span>
+                            <span class="text-emeraldTrust font-bold">₹0 (Zero Brokerage)</span>
+                        </div>
+                    </div>
+                    <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="block w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-center text-xs font-bold text-slate-300">View Trade Verification Log</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DOWNLOAD OPTIONS HUB -->
+    <section id="downloads-hub" class="py-20 border-t border-slate-800/80 bg-slate-950/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-emeraldTrust/10 border border-emeraldTrust/20 text-emeraldTrust text-xs font-bold mb-4">
+                <i class="fa-solid fa-download"></i>
+                <span>Official Release Hub • Version 4.5.2</span>
+            </div>
             
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                progressBar.style.width = '0%';
-            }, 3000);
-        }
-    </script>
+            <h2 class="font-heading font-black text-3xl sm:text-5xl text-white mb-3">Multiple Download Options</h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto mb-12">Choose your preferred device format. All installer packages are digitally signed and anti-malware certified.</p>
+
+            <!-- Main APK Download Box -->
+            <div class="glass-card p-8 rounded-3xl max-w-4xl mx-auto mb-8 border border-emeraldTrust/30 glow-emerald">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <div class="flex items-center space-x-5 text-left">
+                        <div class="w-16 h-16 rounded-2xl bg-saffronGold flex items-center justify-center text-slate-950 text-3xl font-black">
+                            <i class="fa-brands fa-android"></i>
+                        </div>
+                        <div>
+                            <span class="bg-emeraldTrust/20 text-emeraldTrust px-2.5 py-0.5 rounded text-[10px] font-extrabold uppercase tracking-wider">OFFICIAL APK</span>
+                            <h3 class="font-heading font-extrabold text-2xl text-white mt-1">Falcon_Markets_v4.5.2.apk</h3>
+                            <div class="text-xs text-slate-400 mt-1 flex items-center space-x-3">
+                                <span><i class="fa-solid fa-hard-drive mr-1"></i>48.6 MB</span>
+                                <span>•</span>
+                                <span class="text-emeraldTrust font-bold"><i class="fa-solid fa-shield-check mr-1"></i>SEBI Compliant</span>
+                                <span>•</span>
+                                <span>Android 7.0 & Higher</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center space-x-3 w-full md:w-auto">
+                        <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" 
+                           class="w-full md:w-auto px-8 py-4 rounded-2xl bg-emeraldTrust hover:bg-emerald-400 text-slate-950 font-black text-sm shadow-xl flex items-center justify-center space-x-2">
+                            <i class="fa-solid fa-download"></i>
+                            <span>Download APK (Primary Mirror)</span>
+                        </a>
+                        <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="px-5 py-4 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold">Fast Mirror 2</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OS Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="glass-card p-6 rounded-2xl text-left space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-900/40 text-blue-400 flex items-center justify-center text-xl font-bold"><i class="fa-brands fa-windows"></i></div>
+                    <h4 class="font-bold text-white text-base">Falcon Pro for Windows</h4>
+                    <p class="text-xs text-slate-400">Desktop trading terminal with multi-monitor support & tick charts.</p>
+                    <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="block w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-center text-xs font-bold text-slate-300">Download Windows .exe</a>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-left space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-purple-900/40 text-purple-400 flex items-center justify-center text-xl font-bold"><i class="fa-brands fa-apple"></i></div>
+                    <h4 class="font-bold text-white text-base">Falcon Pro for macOS</h4>
+                    <p class="text-xs text-slate-400">Optimized for Apple Silicon M1/M2/M3 chips with zero latency.</p>
+                    <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="block w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-center text-xs font-bold text-slate-300">Download macOS .dmg</a>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl text-left space-y-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-900/40 text-saffronGold flex items-center justify-center text-xl font-bold"><i class="fa-solid fa-globe"></i></div>
+                    <h4 class="font-bold text-white text-base">Falcon Web Platform</h4>
+                    <p class="text-xs text-slate-400">Trade directly from Chrome, Edge, Safari without installation.</p>
+                    <a href="https://falconmarketscom.vercel.app/falconmarkets.apk" download="falconmarkets.apk" class="block w-full py-2.5 rounded-xl bg-saffronGold text-slate-950 font-black text-center text-xs">Launch Web Platform</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-8 h-8 rounded-xl bg-saffronGold flex items-center justify-center text-slate-950 font-black text-sm">FM</div>
+                        <span class="font-heading font-black text-xl text-white">Falcon <span class="text-saffronGold">Markets</span></span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">India's elite technology-driven stock broker bringing zero brokerage and ultra-low latency execution to millions of investors.</p>
+                </div>
+
+                <div>
+                    <h5 class="font-bold text-white text-sm mb-4">Quick Links</h5>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><a href="#features" class="hover:text-white">Features</a></li>
+                        <li><a href="#watchlist" class="hover:text-white">Live Markets</a></li>
+                        <li><a href="#students" class="hover:text-white">Student P&L Wall</a></li>
+                        <li><a href="#downloads-hub" class="hover:text-white">Download Options</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-bold text-white text-sm mb-4">SEBI Compliance</h5>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li>SEBI Reg. No: INZ000293831</li>
+                        <li>NSE Member Code: 90281</li>
+                        <li>BSE Member Code: 6712</li>
+                        <li>CDSL DP ID: 12089300</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-bold text-white text-sm mb-4">Contact & Support</h5>
+                    <ul class="space-y-2 text-xs text-slate-400">
+                        <li><i class="fa-solid fa-phone text-saffronGold mr-2"></i>1800-209-9080 (Toll Free)</li>
+                        <li><i class="fa-solid fa-envelope text-saffronGold mr-2"></i>support@falconmarkets.in</li>
+                        <li><i class="fa-solid fa-building text-saffronGold mr-2"></i>Falcon Tower, BKC, Mumbai 400051</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-slate-900 text-center text-xs text-slate-500">
+                <p>© 2026 Falcon Markets India. All Rights Reserved. SEBI Registered Stock Broker.</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
